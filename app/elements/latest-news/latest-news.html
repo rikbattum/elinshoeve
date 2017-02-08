@@ -11,33 +11,48 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="..\..\bower_components/polymer/polymer.html">
 
 <dom-module id="latest-news">
-  <div id="fb-root"></div>
-  <script>(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+
 
   <template>
     <style include="shared-styles">
       :host {
         display: block;
+        align-content: center
       }
+      .fbframe {
+        align: center;
+        margin-left: 15px;
+        margin-top: 15px;
+        width: 650px;
+        height:2000px
+      }
+      .facebookframe {
+        align-content: center
+      }
+
+      @media (max-width: 600px) {
+        .fbframe {
+          align: center;
+          margin-left: 10px;
+          width: 340px;
+          height:500px
+        }
+      }
+
     </style>
+  <div class="facebookframe">
+    <iframe class="fbframe"
+      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FElinshoeve%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+      style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+      allowTransparency="true"></iframe>
+  </div>
 
-        <iframe
-          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FKennelVanGoverwelle%2F%3Ffref%3Dts&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-          width="1500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-          allowTransparency="true"></iframe>
+    <universal-footer>
+      <div copyright-center>
+        <footer-panel></footer-panel>
+      </div>
+    </universal-footer>
 
-        <universal-footer>
-          <div copyright-center>
-            <footer-panel></footer-panel>
-          </div>
-        </universal-footer>
 
   </template>
   <script>
@@ -56,6 +71,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             value: 'latest-news',
             notify: true
           }
+        },
+        attached: function () {
+          this.async(this.notifyResize, 1);
         }
       });
     })();

@@ -1,6 +1,10 @@
 <dom-module id="footer-panel">
   <template>
     <style include="shared-styles">
+      :host {
+        display: block;
+        margin-bottom: 5px;
+      }
       iron-icon {
         --iron-icon-fill-color:  #4527a0;
       }
@@ -16,6 +20,7 @@
     <p class="footertext"> © Kennel Elinshoeve <a href="mailto:eberendsen@hotmail.com?Subject=Kennel Elinshoeve">
       <iron-icon icon="mail"></iron-icon>
     </a></p>
+    <div class="fb-like" data-href="https://www.facebook.com/Elinshoeve" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
   </template>
 
   <script>
