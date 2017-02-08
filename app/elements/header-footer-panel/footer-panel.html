@@ -1,0 +1,42 @@
+<dom-module id="footer-panel">
+  <template>
+    <style include="shared-styles">
+      iron-icon {
+        --iron-icon-fill-color:  #4527a0;
+      }
+      paper-icon-button {
+        color: #4527a0;
+      }
+
+    </style>
+    <app-location route="{{route}}"></app-location>
+    <template is="dom-if" if="{{_isNotHomeRoute(route)}}">
+      <paper-icon-button class="footerbar" icon="arrow-back" on-tap="doRouteHome"></paper-icon-button>
+    </template>
+    <p class="footertext"> © Kennel Elinshoeve <a href="mailto:eberendsen@hotmail.com?Subject=Kennel Elinshoeve">
+      <iron-icon icon="mail"></iron-icon>
+    </a></p>
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'footer-panel',
+        properties: {
+          route: {
+            type: Object,
+            notify: true
+          }
+        },
+        _isNotHomeRoute: function (route) {
+          return this.route.path != '/';
+        },
+        doRouteHome: function () {
+          this.set('route.path', '/');
+        }
+      });
+    })();
+  </script>
+</dom-module>

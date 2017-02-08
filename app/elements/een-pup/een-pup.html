@@ -1,0 +1,199 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
+<link rel="import" href="..\..\bower_components/iron-grid/iron-grid.html">
+<link rel="import" href="../../bower_components/neon-animation/neon-animation.html">
+
+<dom-module id="een-pup">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+
+      --paper-card-header-text {
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'BioRhyme', serif;
+        font-weight: 500;
+        font-size: x-large;
+        letter-spacing: -1px;
+        text-align: center;
+      }
+
+      .displaymode {
+        display: inline-block !important;
+      }
+
+      --iron-grid-element-style {
+        width: 150%;
+      }
+
+      --iron-container {
+        padding: 0px;
+      }
+
+      .notopmargin {
+        --paper-card-header-image: {
+          padding-top: 0px;
+
+        }
+      }
+    </style>
+
+    <iron-grid-container>
+      <iron-grid id='grid3' log="" xs-max-width="480" s-max-width="960" m-max-width="1280" l-max-width="1600">
+
+        <div class="xs12 s12 m6 displaymode">
+
+
+          <paper-card class="page" image="../images/elinshoeve/speelhuisje.jpg"
+                      heading="Een pup"
+                      elevation="3">
+            <div class="card-content">
+              Als je interesse hebt om een welsh corgi als vriend te hebben, dan kun je contact opnemen met kennel
+              de
+              Elinshoeve voor de puppy planning. Als je nog nooit eerder een puppy hebt gehad, zal je je misschien
+              afvragen hoe het proces precies gaat. Het proces loopt hoofdlijnen als volgt.
+            </div>
+          </paper-card>
+
+          <paper-card image="../images/charlie_jong/charlie_groot_pup.jpg"
+                      heading="Oriënterend gesprek en toekenning voorlopige plaats" class="page"
+                      elevation="3">
+            <div class="card-content">
+              Er vindt eerst een oriënterend gesprek plaats ter plaatse of per telefoon om te kijken of er een goede
+              match is tussen wat jij zoekt en het type hond corgi pembroke. In het algemeen is het natuurlijk
+              belangrijk een hond voldoende aandacht en verzorging krijgt en jullie samen tijd genoeg hebben om
+              leuke
+              dingen te doen. Als blijkt dat er sprake is van een goede match dan krijg jij een plaats op de puppy
+              lijst
+              van de Elinshoeve. Je wordt op de hoogte gehouden van de voortgang, zoals het dekken en de planning
+              rondom
+              de geboorte.
+            </div>
+          </paper-card>
+
+          <paper-card image="../images/charlie_images/charlie_veld.jpg"
+                      heading="Geboorte: kennismaking en afspraken maken"
+                      class="page"
+                      elevation="3">
+            <div class="card-content">
+              Als de pups zijn geboren is er natuurlijk niets leuker dan kort een kijkje te komen nemen of om vast
+              foto's te zien van het nieuwe leven. In overleg kijken we of er inderdaad een pup aan jou kan worden
+              toegekend. Als blijkt dat er voor jou inderdaad een puppy beschikbaar is wordt er contract met
+              aanbetaling
+              en overdrachtsdatum overeengekomen. Dit allemaal op basis van de standaarden van de nederlandse welsh
+              corgi club (NWCC) en met als doel de belangen van de koper en natuurlijk van de hond te waarborgen.
+            </div>
+          </paper-card>
+
+          <paper-card image="../images/charlie_images/charlie_vraag_sneeuw.jpg" heading="Eerste 8 weken"
+                      elevation="3"
+                      class="page">
+            <div class="card-content">
+              In de eerste 8 weken blijven de puppy’s bij elkaar en bij mama en worden verzocht in het kennel. In
+              deze
+              tijd wordt een eerst basis gelegd voor de gedrag van de hond. Deze fase is een heel belangrijke
+              periode in
+              het leven van de pup. In deze periode moeten de pups de rest van de buitenwereld als normaal gaan
+              beschouwen. Ook moeten ze leren dat allerlei prikkels als bv. lawaai van auto's, treinen, apparaten
+              enz.
+              niet eng is. Dit proces wordt socialisatie genoemd. Over het algemeen geldt dat hoe jonger de pup
+              gesocialiseerd wordt, hoe sneller en makkelijker hij zelfvertrouwen opbouwt. Ook vinden de eerste
+              stappen
+              van zindelijkheidstraining plaats. In deze periode worden de pups ook 3 maal ontwormt en gecontroleerd
+              door de dierenarts. Na de uiteindelijke overdracht krijg je ook de officiële stamboompapieren
+              toegezonden.
+              Bij de overdracht krijg je nog wat tips mee, de stambomen van de ouders en het entingsboekje.
+            </div>
+          </paper-card>
+
+          <paper-card image="../images/charlie_images/charlie_staand_hor.jpg" heading="Je pup gaat verhuizen"
+                      elevation="3"
+                      class="page">
+            <div class="card-content">
+              Na 8 weken komt de hond bij jou in huis en nemen jullie de zorg over. Bij overdracht formaliseren we
+              het
+              contract en je krijgt de stamboom van je hond thuisgestuurd. Erg leuk, maar in de periode moet vindt
+              natuurlijk de verder opvoeding plaats en is de tweede fase van socialisatie, die over het algemeen tot
+              zes
+              maanden duurt. Je pup moet volledig zindelijk gemaakt worden en je moet aandacht besteden aan de
+              opvoeding
+              van je pup. De eerste periode is bepalend voor het karakter van de hond.
+            </div>
+          </paper-card>
+
+        </div>
+
+        <div class="xs12 s12 m6 displaymode">
+
+          <paper-card class="page" image="../images/charlie_jong/charlie_tristan_pup.jpg"
+                      heading="Kleine charlie en Tristan" elevation="3">
+          </paper-card>
+
+          <paper-card image="../images/charlie_jong/charlie_park.jpg" heading="Charlie in het park" elevation="3">
+          </paper-card>
+
+          <paper-card image="../images/charlie_jong/charlie_olivier_vakantie.jpg" heading="Samen op vakantie"
+                      elevation="3">
+          </paper-card>
+
+          <paper-card image="../images/charlie_images/snuffel.jpg" heading="Snuffelen" elevation="3"></paper-card>
+
+
+          <paper-card image="../images/charlie_andere_honden/charlie_basje.jpg" heading="Hoe moet het allemaal?"
+                      elevation="3"
+                      class="page">
+            <div class="card-content">
+              Wil je tips, dan kun je bij ons terecht, maar het is natuurlijk ook superleuk om met je pup op puppy
+              cursus te gaan bij een lokale kynologie vereniging. Ook nadat je hond zijn plaatsje in de familie en
+              omgeving heeft gevonden is het mogelijk om trainingen te blijven volgen.
+            </div>
+          </paper-card>
+        </div>
+      </iron-grid>
+    </iron-grid-container>
+
+    <universal-footer>
+      <div copyright-center>
+        <footer-panel></footer-panel>
+      </div>
+    </universal-footer>
+
+
+  </template>
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'een-pup',
+        behaviors: [
+          Polymer.IronResizableBehavior,
+          Polymer.NeonSharedElementAnimatableBehavior
+        ],
+        properties: {
+          foo: {
+            type: String,
+            value: 'corgis-page',
+            notify: true
+          }
+        },
+        attached: function () {
+          this.async(this.notifyResize, 1);
+        },
+      });
+    })();
+  </script>
+</dom-module>

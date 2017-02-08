@@ -1,0 +1,25 @@
+{
+  "name": "polymer-starter-kit",
+  "private": true,
+  "dependencies": {
+    "iron-elements": "PolymerElements/iron-elements",
+    "neon-elements": "PolymerElements/neon-elements",
+    "page": "visionmedia/page.js#~1.6.4",
+    "paper-elements": "PolymerElements/paper-elements",
+    "platinum-elements": "PolymerElements/platinum-elements",
+    "polymer": "Polymer/polymer",
+    "iron-grid": "https://github.com/The5heepDev/iron-grid.git",
+    "app-layout": "PolymerElements/app-layout#0.10.0",
+    "app-route": "carbon-route#0.9.3",
+    "universal-footer": "https://github.com/prateekjadhwani/universal-footer.git"
+  },
+  "devDependencies": {
+    "web-component-tester": "^4.0.0"
+  },
+  "ignore": [],
+  "resolutions": {
+    "app-layout": "^0.10.6",
+    "app-route": "^0.9.3",
+    "polymer": "^1.6.0"
+  }
+}

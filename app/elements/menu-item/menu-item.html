@@ -1,0 +1,184 @@
+<!--
+@license
+Copyright (c) 2017  Fokkerij Houtdorperveld
+-->
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-ripple/paper-ripple.html">
+<link rel="import" href="../../bower_components/iron-collapse/iron-collapse.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-ripple/paper-ripple.html">
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../../bower_components/app-route/app-route.html">
+<link rel="import" href="../../bower_components/app-route/app-location.html">
+<link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet">
+<link rel="import" href="../../bower_components/iron-icons/maps-icons.html">
+<link rel="import" href="../../bower_components/neon-animation/neon-animation.html">
+<link rel="import" href="../../bower_components/iron-elements/iron-elements.html">
+
+<dom-module id="charlie-menu-item">
+  <template>
+    <style is="custom-style">
+      :host {
+        display: inline-flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      paper-card {
+        color: #8d6e63;
+        --paper-card-background-color: #8d6e63;
+        border-style: outset;
+        border-color: #8d6e63;
+        border-width: medium;
+        border-top-left-radius: 3em;
+        border-top-right-radius: 3em;
+        border-bottom-right-radius: 3em;
+        border-bottom-left-radius: 3em;
+        --paper-card-header-image: {
+          border-top-left-radius: 2.8em;
+          border-top-right-radius: 2.8em;
+        };
+        padding-bottom: 27px;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+
+      .titel {
+        padding-top:3px;
+        color: white;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'BioRhyme', serif;
+        font-weight: 500;
+        font-size: x-large;
+        letter-spacing: -1px;
+        text-align: center;
+      }
+
+      .grow {
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+      }
+
+      .items {
+        padding-bottom: 1%;
+      }
+
+      .smallpic {
+        width: 50px;
+        height: 50px;
+      }
+      .smallpicsocial {
+        width: 40px;
+        height: 40px;
+      }
+
+      @media (max-width: 600px) {
+        .titel {
+          font-weight: 400;
+          font-size: large;
+        }
+
+        .items {
+          margin-bottom: -1%;
+        }
+
+        .smallpic {
+          width: 35px;
+          height: 35px;
+        }
+        .smallpicsocial {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+    </style>
+
+    <app-location route="{{route}}"></app-location>
+    <!-- Routes -->
+    <app-route route="{{route}}" pattern="/:type" data="{{type}}" tail="{{tail}}" query-params="{{params}}"></app-route>
+
+      <paper-card on-tap="doRoute" page={{page}} id="card" image={{image_url}} class="custom" elevation="3">
+        <paper-ripple></paper-ripple>
+        <div class="titel">{{title}}</div>
+        <div align="center" class="items">
+          <img class="smallpic" src=../../images/icons/corgi-icon.png alt="picture">
+          <template is="dom-if" if="{{_checkTitle(title)}}">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+	        class="smallpicsocial" viewBox="0 0 266.893 266.895" enable-background="new 0 0 266.893 266.895"
+	        xml:space="preserve" style="padding-bottom: 2px; padding-left: 2px">
+          <path id="Blue_1_" fill="#3C5A99" d="M248.082,262.307c7.854,0,14.223-6.369,14.223-14.225V18.812
+	        c0-7.857-6.368-14.224-14.223-14.224H18.812c-7.857,0-14.224,6.367-14.224,14.224v229.27c0,7.855,6.366,14.225,14.224,14.225
+	        H248.082z"/>
+          <path id="f" fill="#FFFFFF" d="M182.409,262.307v-99.803h33.499l5.016-38.895h-38.515V98.777c0-11.261,3.127-18.935,19.275-18.935
+	        l20.596-0.009V45.045c-3.562-0.474-15.788-1.533-30.012-1.533c-29.695,0-50.025,18.126-50.025,51.413v28.684h-33.585v38.895h33.585
+	        v99.803H182.409z"/>
+        </svg>
+          </template>
+        </div>
+      </paper-card>
+  </template>
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'charlie-menu-item',
+        behaviors: [
+          Polymer.IronResizableBehavior,
+          Polymer.NeonAnimationRunnerBehavior
+        ],
+        properties: {
+          title: {
+            type: String
+          },
+          image_url: {
+            type: String
+          },
+          page: {
+            type: String,
+            notify: true,
+            value: 'notknown'
+          },
+          route: {
+            type: Object,
+            notify: true
+          },
+          animationConfig: {
+            value: function () {
+              return {
+                'entry': {
+                  name: 'slide-from-left-animation',
+                  node: this,
+                  timing: {duration: 2000}
+                }
+              }
+            }
+          }
+        },
+        doRoute: function () {
+          this.set('route.path', this.page);
+          console.log('routing to ' + this.route.path + 'setting scroller focus');
+          window.scrollTo(0,0);
+        },
+        _checkTitle: function (title) {
+          if (title === "Social") {
+            console.log(title);
+            return true;
+          }
+          else {
+            return false;
+          }
+        },
+        attached: function () {
+          this.playAnimation('entry');
+        }
+      });
+    })
+    ();
+  </script>
+</dom-module>
