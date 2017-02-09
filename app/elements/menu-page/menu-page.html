@@ -23,7 +23,7 @@ Copyright (c) 2016  Corgi Fokkerij Houtdorp
     <!--neon-animated-pages selects the view based on the active route -->
     <neon-animated-pages selected="[[type.type]]" attr-for-selected="data-type" restamp="true" id="neopages">
       <menu-overview class="pages" data-type=""></menu-overview>
-      <latest-news class="pages" data-type="social" exit-animation="scale-down-animation" ></latest-news>
+      <latest-news class="pages" data-type="social" exit-animation="scale-down-animation"></latest-news>
       <kennel-page class="pages" data-type='kennel' exit-animation="scale-down-animation"></kennel-page>
       <corgis-page class="pages" data-type='corgis' exit-animation="scale-down-animation"></corgis-page>
       <charlie-page class="pages" data-type="charlie" exit-animation="scale-down-animation"></charlie-page>
@@ -46,8 +46,7 @@ Copyright (c) 2016  Corgi Fokkerij Houtdorp
         behaviors: [
           Polymer.NeonAnimationRunnerBehavior
         ],
-        properties: {
-        }
+        properties: {}
       });
     })();
   </script>

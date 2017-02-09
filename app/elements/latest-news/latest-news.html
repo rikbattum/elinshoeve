@@ -12,40 +12,90 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="latest-news">
 
-
   <template>
     <style include="shared-styles">
       :host {
         display: block;
         align-content: center
       }
-      .fbframe {
+
+      iframe {
         align: center;
         margin-left: 15px;
         margin-top: 15px;
-        width: 650px;
-        height:2000px
+        width: 500px;
+        height: 850px;
       }
-      .facebookframe {
-        align-content: center
+
+      .displaymode {
+        display: inline-block !important;
+        margin-top: 5px;
+      }
+
+      --iron-grid-element-style {
+        width: 150%;
+      }
+
+      --iron-container {
+        padding: 0px;
+      }
+
+      .instagram_grid {
+        margin-top: 30px;
       }
 
       @media (max-width: 600px) {
-        .fbframe {
-          align: center;
-          margin-left: 10px;
-          width: 340px;
-          height:500px
+
+        :host {
+         width: 500px;
+        }
+
+        iframe {
+          align-self: center;
+          margin-top: 10px;
+          margin-left: 0px;
+          width: 500px;
+          height: 850px;
+        }
+
+        .instagram_grid {
+          margin-top: 5px;
+        }
+
+        .displaymode {
+          display: inline-block !important;
+          margin-top: 5px;
+          padding-left: 0px !important;
+          padding-right: 0px !important;
         }
       }
-
     </style>
-  <div class="facebookframe">
-    <iframe class="fbframe"
-      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FElinshoeve%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-      style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-      allowTransparency="true"></iframe>
-  </div>
+
+
+    <iron-grid-container>
+      <iron-grid id='grid4' log="" xs-max-width="480" s-max-width="960" m-max-width="1280" l-max-width="1600">
+        <div class="xs12 s12 m6 displaymode">
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FElinshoeve%2F&tabs=timeline&width=500&height=800&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+            width="500" height="800" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+            allowTransparency="true"></iframe>
+        </div>
+        <div class="xs12 s12 m6 displaymode">
+          <blockquote class="embedly-card" data-card-key="077192239e03472f8fe1dc5e02efa40f" data-card-controls="0"
+                      data-card-type="article"><h4><a href="https://www.instagram.com/elinshoeve/">Corgi Kennel
+            ElinsHoeve (@elinshoeve) * Instagram photos and videos</a></h4>
+            <p>See Instagram photos and videos from Corgi Kennel ElinsHoeve (@elinshoeve)</p></blockquote>
+          <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+          <div class="instagram_grid">
+            <!-- LightWidget WIDGET -->
+            <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+            <iframe src="//lightwidget.com/widgets/b58c9729a3d15576a5ef66e362356bd2.html" scrolling="no"
+                    allowtransparency="true" class="lightwidget-widget"
+                    style="width: 100%; border: 0; overflow: hidden;"></iframe>
+          </div>
+        </div>
+      </iron-grid>
+    </iron-grid-container>
 
     <universal-footer>
       <div copyright-center>
