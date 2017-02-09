@@ -114,8 +114,8 @@ This runs the unit tests defined in the `app/test` directory through [web-compon
 To run tests Java 7 or higher is required. To update Java go to http://www.oracle.com/technetwork/java/javase/downloads/index.html and download ***JDK*** and install it.
 
 #### Build & Vulcanize
-
-```sh
+               
+               ```sh
 gulp
 ```
 

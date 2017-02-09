@@ -9,16 +9,6 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/app-layout/app-layout.html">
-<link rel="import" href="../../bower_components/iron-grid/iron-grid.html">
-<link rel="import" href="../../bower_components/app-route/app-route.html">
-<link rel="import" href="../../bower_components/app-route/app-location.html">
-<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
-<link rel="import" href="../../bower_components/paper-behaviors/paper-button-behavior.html">
-<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
-<link rel="import" href="../../bower_components/universal-footer/universal-footer.html">
-
 <html lang="en">
 
 <head>
@@ -57,8 +47,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild-->
 
-  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
-  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.js -->
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
   <!-- endbuild -->
 
   <!-- Because this project uses vulcanize this should be your only html import
@@ -85,14 +75,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </app-header-layout>
 
 
-
-
 </template>
 
 <!-- build:js scripts/app.js -->
 <script src="scripts/app.js">
 </script>
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
 <!-- endbuild-->
+
+<script>
+  // Initialize Firebase
+  // TODO: Replace with your project's customized code snippet
+  var config = {
+    apiKey: "AIzaSyA82h5u2aQMflZn52P9dctIIffdNYPv09I",
+    authDomain: "elinshoeve.firebaseapp.com",
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-app.js"></script>
 
 </body>
 
