@@ -1,0 +1,164 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<dom-module id="charlie-page">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+
+      --paper-card-header-text {
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'BioRhyme', serif;
+        font-weight: 500;
+        font-size: x-large;
+        letter-spacing: -1px;
+        text-align: center;
+      }
+
+      .displaymode {
+        display: inline-block !important;
+      }
+
+      --iron-grid-element-style {
+        width: 150%;
+      }
+
+      --iron-container {
+        padding: 0px;
+      }
+    </style>
+
+    <iron-grid-container>
+      <iron-grid id='grid3' log="" xs-max-width="480" s-max-width="960" m-max-width="1280" l-max-width="1600">
+        <div class="xs12 s12 m6 displaymode">
+          <paper-card image="../images/charlie_images/charlie_staand2.jpeg" heading="Introductie" elevation="3"
+                      class="page">
+            <div class="card-content">
+              Charlie, officeel genaamd Virginia van de Goudse Hout is onze Welsh Corgi.
+              Op dit moment is ze de enige teef waarmee wordt mee gefokt.
+              Ze beschikt over de officiele stamboom papieren en medische keuringen en stamt af van Key Junoba's
+              House
+              en Ophelia v. de Goudse Hout.
+              Ze heeft de kleur Sable en Wit en is geboren 28 juli 2013 in Vlist.
+            </div>
+          </paper-card>
+          <paper-card image="../images/charlie_jong/charlie_groot_pup.jpg" heading="Charlie als pup" elevation="3"
+                      class="page">
+          </paper-card>
+          <paper-card image="../images/charlie_images/charlie_tuin_2.jpg" heading="Karakter" elevation="3"
+                      class="page">
+            <div class="card-content">
+              Charlie is heel goed gesocialiseerd met onze kinderen en is een vast speelmaatje. Ze houdt van
+              wandelen in
+              het bos en op de hei.
+              Charlie is een gezonde vrolijke hond en houdt ook erg van knufflen en spelen met een bal.
+              Ze is zeer snel op de korte afstand en altijd enthousiast.
+            </div>
+          </paper-card>
+          <paper-card image="../images/charlie_andere_honden/charlie_bas_groot.jpg"
+                      heading="Charlie en buurman Basje"
+                      elevation="3" class="page">
+          </paper-card>
+          <paper-card image="../images/charlie_images/charlie_mos.jpg" heading="Verstopt in het bos" elevation="3"
+                      class="page">
+          </paper-card>
+          <paper-card image="../images/charlie_images/charlie_in_actie.jpg" heading="Charlie in actie" elevation="3"
+                      class="page">
+          </paper-card>
+          <paper-card image="../images/charlie_images/ikhoorwat.jpg" heading="Ik hoor wat" elevation="3"
+                      class="page">
+          </paper-card>
+        </div>
+
+
+        <div class="xs12 s12 m6 displaymode">
+
+          <paper-card image="../images/charlie_kids/charlie_wacht.jpg" heading="Sociaal" elevation="3" class="page">
+            <div class="card-content">
+              Charlie kan ook gemakkelijk uren achter elkaar slapen en heel erg lui zijn.
+              Ze heeft bij ons een grote zitzak, maar vind gemakkelijk allerlei fijne plekjes in huis om te
+              vertoeven.
+              Charlie is een echt dol op contact, ook met wildvreemde mensen.
+              Charlie is gemakkelijk met andere honden. Ondanks haar kleine postuur heeft ze een dominant karakter
+              en
+              laat zich niet makkelijk aan de kant zetten.
+              Ze kan met de meeste andere honden prima door één deur.
+            </div>
+          </paper-card>
+
+
+          <paper-card image="../images/charlie_wedstrijd/charlie_wedstrijd_kids.jpg" heading="Competitie"
+                      elevation="3"
+                      class="page">
+            <div class="card-content">
+              Wij zijn meestal gewoon blij met Charlie en zijn niet erg actief in de hondensport.
+              Toch kan Charlie zich meten met de toppers. In 2016 sleepte ze de tweede prijs bij de internationale
+              Hanze
+              show in de wacht.
+            </div>
+          </paper-card>
+
+          <paper-card image="../images/charlie_images/charlie_tuin.jpg" heading="Koningin van de tuin" elevation="3"
+                      class="page">
+          </paper-card>
+
+          <paper-card image="../images/charlie_images/charlie_sweet.jpg" elevation="3" heading="Isn't she lovely"
+                      class="page">
+          </paper-card>
+
+          <paper-card image="../images/charlie_images/charlie_ende_baas.jpg" heading="Charlie en de baas"
+                      elevation="3" class="page">
+          </paper-card>
+          <paper-card image="../images/charlie_kids/charlie_ollie.jpg" heading="Charlie en Olivier" elevation="3"
+                      class="page">
+          </paper-card>
+          <paper-card image="../images/charlie_images/charlie_pad.jpg" heading="Charlie op pad" elevation="3"
+                      class="page">
+          </paper-card>
+
+        </div>
+      </iron-grid>
+    </iron-grid-container>
+
+    <universal-footer>
+      <div copyright-center>
+        <footer-panel></footer-panel>
+      </div>
+    </universal-footer>
+
+  </template>
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'charlie-page',
+        behaviors: [
+          Polymer.IronResizableBehavior,
+          Polymer.NeonSharedElementAnimatableBehavior
+        ],
+        properties: {
+          foo: {
+            type: String,
+            value: 'charlie-page',
+            notify: true
+          },
+          attached: function () {
+            this.async(this.notifyResize, 1);
+            console.log('resize')
+          },
+        }
+      });
+    })();
+  </script>
+</dom-module>

@@ -1,0 +1,181 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+
+<dom-module id="kennel-page">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+
+      --paper-card-header-text {
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'BioRhyme', serif;
+        font-weight: 500;
+        font-size: x-large;
+        letter-spacing: -1px;
+        text-align: center;
+      }
+
+      .displaymode {
+        display: inline-block !important;
+      }
+
+      --iron-grid-element-style {
+        width: 150%;
+      }
+
+      --iron-container {
+        padding: 0px;
+      }
+    </style>
+
+      <iron-grid-container id="pageoverview">
+          <iron-grid id='grid2' log="" xs-max-width="480" s-max-width="960" m-max-width="1280" l-max-width="1600">
+            <div class="xs12 s12 m6 displaymode">
+              <paper-card image="../images/elinshoeve/garden.jpg" heading="Waar" elevation="3">
+                <div class="card-content">
+                  Kennel van het Houtdorperveld is gevestigd in Ermelo tussen het bos en het Speulder- en
+                  Houtdorperveld.
+                  Officeel gemeente Ermelo in het deelgebied Houtdorp. Het bos is een van de mooiste en oudste bossen
+                  van
+                  Nederland en wordt ook wel het bos van de dansende bomen genoemd. Dit vanwege de kromme en in
+                  wonderlijke
+                  bochten groeiende eiken- en beukenbomen.
+                  Het is een mooie plek voor honden om te wonen, te spelen en te wandelen.
+                </div>
+              </paper-card>
+
+              <paper-card image="../images/elinshoeve/houtdorp.jpg" class="page" elevation="3">
+              </paper-card>
+
+              <paper-card image="../images/elinshoeve/springkussen.jpeg" heading="Onstaan" class="page" elevation="3">
+                <div class="card-content">
+                  Wij zijn een zeer kleine en gemoedelijke kennel. Charlie is de trouwe viervoeter van onze familie en
+                  we
+                  zijn van plan zo
+                  nu met haar een nestje te fokken. Sinds 2016 zijn we hiermee aan de gang. Naast de kennis die we hier
+                  zelf
+                  over opgedaan hebben, later we
+                  ons adviseren door onze andere fokkers en natuurlijk onze dierenarts voor de medische kant.
+                  Op de Boerderij is een specifieke kamer beschikbaar en voldoende ruimte beschikbaar om een nestje
+                  binnen
+                  te ontvangen.
+                </div>
+              </paper-card>
+
+              <paper-card image="../images/family_images/rikenesther.jpg" heading="Wie zijn wij?" class="page"
+                          elevation="3">
+                <div class="card-content">
+                  Wij zijn Esther en Rik en hebben samen 3 kinderen, 2 jongens (Tristan en Olivier) en een meisje
+                  (Elin).
+                  We
+                  vinden het leuk om een Welsh Corgi te hebben en ons met deze activiteiten bezig te houden.
+                  Ons doel is om actief bezig te zijn met het type wat wij leuk vinden en deze passie te kunnen delen
+                  met
+                  anderen. En op de achtergrond natuurlijk op kleine gestructureerde manier bij te dragen aan de
+                  instandhouding van het ras.
+                </div>
+              </paper-card>
+
+              <paper-card image="../images/elinshoeve/boom.jpg" heading="Houtdorperveld" class="page" elevation="3">
+              </paper-card>
+
+              <paper-card image="../images/elinshoeve/pony.jpg" heading="Paarden" class="page" elevation="3">
+                <div class="card-content">
+                  Op de Elinshoeve worden ook paarden gefokt, voornamelijk van het ras KWPN. En er wonen op dit moment 2
+                  pony's en een ram.
+                </div>
+              </paper-card>
+
+              <paper-card image="../images/elinshoeve/schaapjes.jpg" heading="Schapen" class="page" elevation="3">
+              </paper-card>
+
+
+            </div>
+
+            <div class="xs12 s12 m6 displaymode">
+
+              <paper-card image=" ../images/charlie_images/charlie_gras.jpeg" heading="Principes van het Kennel"
+                          class="page" elevation="3">
+                <div class="card-content">
+                  Met betrekking tot het kennis en het fokken volgen wij de richtlijnen van de Nederlandse Welsh Corgi
+                  Club
+                  en de Raad van Beheer. Meer over deze instellingen vind je op de Corgi's page. Meer over de werkwijze
+                  op
+                  de pagina over een Pup.
+                </div>
+              </paper-card>
+              <paper-card image="../images/elinshoeve/zijkant.jpg" heading="De boerderij" class="page" elevation="3">
+              </paper-card>
+
+
+              <paper-card image="../images/family_images/de_broers.jpg" heading="De broers" class="page" elevation="3">
+              </paper-card>
+              <paper-card image="../images/family_images/rik_en_elin.jpg" heading="De kleine zus" class="page"
+                          elevation="3">
+              </paper-card>
+
+              <paper-card image="../images/elinshoeve/dansende_boom.jpg" heading="Het bos van de dansende bomen"
+                          class="page" elevation="3">
+              </paper-card>
+
+              <paper-card image="../images/elinshoeve/sunset.jpg" heading="Speulderveld"
+                          class="page" elevation="3">
+              </paper-card>
+
+              <paper-card image="../images/charlie_images/charlie_door_wietske.jpg" heading="Charlie" class="page" elevation="3">
+              </paper-card>
+
+              <paper-card image="../images/elinshoeve/koffietafel.jpeg" heading="Koffie?" class="page" elevation="3">
+                <div class="card-content">
+                  Heb je vragen mbt het houden van een corgi of anders. Stuur ons gerust een mailtje of een berichtje op
+                  Facebook.
+                  Je bent dan natuurlijk ook altijd welkom voor een bakje koffie als je in de buurt bent.
+                </div>
+              </paper-card>
+            </div>
+          </iron-grid>
+      </iron-grid-container>
+      <universal-footer>
+        <div copyright-center>
+          <footer-panel></footer-panel>
+        </div>
+      </universal-footer>
+
+
+
+  </template>
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'kennel-page',
+        behaviors: [
+          Polymer.IronResizableBehavior,
+          Polymer.NeonSharedElementAnimatableBehavior
+        ],
+        properties: {
+          foo: {
+            type: String,
+            value: 'kennel-page',
+            notify: true
+          }
+        },
+        attached: function () {
+          this.async(this.notifyResize, 1);
+        }
+      })
+    })();
+  </script>
+</dom-module>
