@@ -1,0 +1,57 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<dom-module id="puppie-planning">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+    </style>
+    <iron-grid-container id="puppie-planning-page">
+      <iron-grid id='grid5' log="" xs-max-width="480" s-max-width="960" m-max-width="1280" l-max-width="1600">
+        <div class="xs12 s12 m12 displaymode">
+          <div class="content-planning">
+            Het ligt in de planning van de Kennel om in het voorjaar of begin zomer een nestje te fokken. Neem voor interesse contact met ons op.
+          </div>
+        </div>
+      </iron-grid>
+    </iron-grid-container>
+    <universal-footer>
+      <div copyright-center>
+        <footer-panel></footer-panel>
+      </div>
+    </universal-footer>
+
+  </template>
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'puppie-planning',
+        behaviors: [
+          Polymer.IronResizableBehavior,
+          Polymer.NeonSharedElementAnimatableBehavior
+        ],
+        properties: {
+          foo: {
+            type: String,
+            value: 'volgons-page',
+            notify: true
+          }
+        },
+        attached: function () {
+          this.async(this.notifyResize, 1);
+        }
+      });
+    })();
+  </script>
+</dom-module>

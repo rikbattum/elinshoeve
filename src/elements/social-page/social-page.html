@@ -1,0 +1,128 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<dom-module id="social-page">
+
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        align-content: center
+      }
+
+      iframe {
+        align: center;
+        margin-left: 15px;
+        margin-top: 15px;
+        width: 500px;
+        height: 700px;
+      }
+
+      .displaymode {
+        display: inline-block !important;
+        margin-top: 5px;
+      }
+
+      --iron-grid-element-style {
+        width: 150%;
+      }
+
+      --iron-container {
+        padding: 0px;
+      }
+
+      .instagram_grid {
+        margin-top: 30px;
+      }
+
+      @media (max-width: 600px) {
+
+        .setwidth {
+          width: 250px;
+        }
+
+        iframe {
+          width: 320px;
+          height: 700px;
+          align-self: center;
+          margin-top: 10px;
+          margin-left: -15px;
+        }
+
+        .instagram_grid {
+          margin-top: 5px;
+        }
+
+        .displaymode {
+          display: inline-block !important;
+          margin-top: 5px;
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+        }
+      }
+    </style>
+
+
+    <iron-grid-container>
+      <iron-grid id='grid4' log="" xs-max-width="480" s-max-width="960" m-max-width="1280" l-max-width="1600">
+        <div class="xs12 s12 m6 displaymode">
+          <div class="setwidth">
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FElinshoeve%2F&tabs=timeline&width=320&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+              width="320" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+              allowTransparency="true"></iframe>
+          </div>
+        </div>
+        <div class="xs12 s12 m6 displaymode">
+          <blockquote class="embedly-card" data-card-key="077192239e03472f8fe1dc5e02efa40f" data-card-controls="0"
+                      data-card-type="article"><h4><a href="https://www.instagram.com/elinshoeve/">Corgi Kennel
+            ElinsHoeve (@elinshoeve) * Instagram photos and videos</a></h4>
+            <p>See Instagram photos and videos from Corgi Kennel ElinsHoeve (@elinshoeve)</p></blockquote>
+          <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+          <iframe src="//widgets-code.websta.me/w/bad0780d79c1?ck=MjAxNy0wMi0xMFQyMzowNDoyNi4wOTJa"
+                  allowtransparency="true" frameborder="0" scrolling="no"
+                  style="border:none;overflow:auto;height:685px;width:335px;"></iframe>
+          <!-- WEBSTA WIDGETS - widgets.websta.me -->
+        </div>
+      </iron-grid>
+    </iron-grid-container>
+
+    <universal-footer>
+      <div copyright-center>
+        <footer-panel></footer-panel>
+      </div>
+    </universal-footer>
+
+
+  </template>
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'social-page',
+        behaviors: [
+          Polymer.IronResizableBehavior,
+          Polymer.NeonSharedElementAnimatableBehavior
+        ],
+        properties: {
+          foo: {
+            type: String,
+            value: 'latest-news',
+            notify: true
+          }
+        },
+        attached: function () {
+          this.async(this.notifyResize, 1);
+        }
+      });
+    })();
+  </script>
+</dom-module>

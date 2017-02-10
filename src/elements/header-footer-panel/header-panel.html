@@ -1,0 +1,88 @@
+
+
+<dom-module id="header-panel">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+
+      paper-icon-button {
+        color: #4527a0;
+      }
+
+    </style>
+
+    <paper-header-panel id="headerScroll">
+    <app-header effects="waterfall resize-title blend-background parallax-background" condenses reveals shadow="true" >
+      <app-toolbar>
+        <app-location route="{{route}}"></app-location>
+        <template is="dom-if" if="{{_isNotHomeRouteNavBar(route)}}">
+          <a href="/">
+            <paper-icon-button class="headerbar" icon="arrow-back" on-click="doRouteHomeNavBar"></paper-icon-button>
+          </a>
+        </template>
+        <div condensed-title>{{pagetitle}}</div>
+      </app-toolbar>
+      <app-toolbar class="middle"></app-toolbar>
+      <app-toolbar class="bottom">
+        <div main-title>{{pagetitle}}</div>
+      </app-toolbar>
+    </app-header>
+    </paper-header-panel>
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+        is: 'header-panel',
+        properties: {
+          route: {
+            type: Object,
+            notify: true,
+            observer: '_routechange'
+          },
+          pagetitle: {
+            type: String,
+            value: 'Kennel Elinshoeve'
+          }
+        },
+        _isNotHomeRouteNavBar: function (route) {
+          return this.route.path != '/';
+        },
+        doRouteHomeNavBar: function () {
+          window.scrollTo(0,0);
+        },
+        _routechange: function (route) {
+          switch (route.path) {
+            case '/' :
+              this.pagetitle = 'Corgi Kennel Elinshoeve';
+              break;
+            case '/kennel' :
+              this.pagetitle = 'De Kennel';
+              break;
+            case '/corgis' :
+              this.pagetitle = 'Corgi\'s';
+              break;
+            case '/eenpup' :
+              this.pagetitle = 'Een pup';
+              break;
+            case '/volgons' :
+              this.pagetitle = 'Planning';
+              break;
+            case '/social' :
+              this.pagetitle = 'Social';
+              break;
+            case '/charlie' :
+              this.pagetitle = 'Charlie';
+              break;
+            default :
+              this.pagetitle = 'Kennel Elinshoeve';
+          }
+        }
+      });
+    })();
+  </script>
+</dom-module>
