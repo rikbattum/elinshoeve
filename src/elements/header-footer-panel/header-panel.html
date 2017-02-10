@@ -53,7 +53,7 @@
           return this.route.path != '/';
         },
         doRouteHomeNavBar: function () {
-//          this.set('route.path', '/');
+          window.scrollTo(0,0);
         },
         _routechange: function (route) {
           switch (route.path) {
@@ -61,7 +61,7 @@
               this.pagetitle = 'Corgi Kennel Elinshoeve';
               break;
             case '/kennel' :
-              this.pagetitle = 'Het Kennel';
+              this.pagetitle = 'De Kennel';
               break;
             case '/corgis' :
               this.pagetitle = 'Corgi\'s';
@@ -70,7 +70,7 @@
               this.pagetitle = 'Een pup';
               break;
             case '/volgons' :
-              this.pagetitle = 'Volg ons';
+              this.pagetitle = 'Planning';
               break;
             case '/social' :
               this.pagetitle = 'Social';

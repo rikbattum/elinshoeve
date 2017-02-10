@@ -5,7 +5,6 @@
         display: block;
         margin-bottom: 5px;
         margin-top: -15px;
-
       }
 
       iron-icon {
@@ -28,19 +27,6 @@
 
       .buttons {
         margin-top: 3px;
-      }
-    </style>
-    <div id="fb-root"></div>
-
-    <app-location route="{{route}}"></app-location>
-    <template is="dom-if" if="{{_isNotHomeRoute(route)}}">
-      <paper-icon-button icon="arrow-back" on-tap="doRouteHome"></paper-icon-button>
-    </template>
-
-    <div style="align-content:center">
-      <div class="fb-like" data-href="https://www.facebook.com/Elinshoeve" data-layout="button_count" data-action="like"
-           data-size="small" data-show-faces="false" data-share="true"></div>
-      <style>
       .ig-b- {
         display: inline-block;
       }
@@ -68,7 +54,30 @@
           background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-24@2x.png);
           background-size: 60px 178px;
         }
-      }</style>
+      }
+    </style>
+
+    <!-- facebook stuff -->
+
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.8";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <app-location route="{{route}}"></app-location>
+    <template is="dom-if" if="{{_isNotHomeRoute(route)}}">
+      <paper-icon-button icon="arrow-back" on-tap="doRouteHome"></paper-icon-button>
+    </template>
+
+    <div style="align-content:center">
+      <div class="fb-like" data-href="https://www.facebook.com/Elinshoeve" data-layout="button_count" data-action="like"
+           data-size="large" data-show-faces="true" data-share="true"></div>
       <div class="buttons">
        <a href="https://www.instagram.com/elinshoeve/?ref=badge" class="ig-b- ig-b-24 instagram"><img
           src="//badges.instagram.com/static/images/ig-badge-24.png" alt="Instagram"/></a>
@@ -96,6 +105,7 @@
         },
         doRouteHome: function () {
           this.set('route.path', '/');
+          window.scrollTo(0,0);
         }
       });
     })();

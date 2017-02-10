@@ -8,7 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<dom-module id="latest-news">
+<dom-module id="social-page">
 
   <template>
     <style include="shared-styles">
@@ -22,7 +22,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin-left: 15px;
         margin-top: 15px;
         width: 500px;
-        height: 850px;
+        height: 700px;
       }
 
       .displaymode {
@@ -44,14 +44,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       @media (max-width: 600px) {
 
-        :host {
-         width: 500px;
+        .setwidth {
+          width: 250px;
         }
 
         iframe {
+          width: 320px;
+          height: 700px;
           align-self: center;
           margin-top: 10px;
-          margin-left: 0px;
+          margin-left: -15px;
         }
 
         .instagram_grid {
@@ -71,10 +73,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <iron-grid-container>
       <iron-grid id='grid4' log="" xs-max-width="480" s-max-width="960" m-max-width="1280" l-max-width="1600">
         <div class="xs12 s12 m6 displaymode">
-          <iframe
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FElinshoeve%2F&tabs=timeline&width=500&height=800&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-            width="500" height="800" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-            allowTransparency="true"></iframe>
+          <div class="setwidth">
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FElinshoeve%2F&tabs=timeline&width=320&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+              width="320" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+              allowTransparency="true"></iframe>
+          </div>
         </div>
         <div class="xs12 s12 m6 displaymode">
           <blockquote class="embedly-card" data-card-key="077192239e03472f8fe1dc5e02efa40f" data-card-controls="0"
@@ -82,13 +86,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             ElinsHoeve (@elinshoeve) * Instagram photos and videos</a></h4>
             <p>See Instagram photos and videos from Corgi Kennel ElinsHoeve (@elinshoeve)</p></blockquote>
           <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
-          <div class="instagram_grid">
-            <!-- LightWidget WIDGET -->
-            <script src="//lightwidget.com/widgets/lightwidget.js"></script>
-            <iframe src="//lightwidget.com/widgets/b58c9729a3d15576a5ef66e362356bd2.html" scrolling="no"
-                    allowtransparency="true" class="lightwidget-widget"
-                    style="width: 100%; border: 0; overflow: hidden;"></iframe>
-          </div>
+          <iframe src="//widgets-code.websta.me/w/bad0780d79c1?ck=MjAxNy0wMi0xMFQyMzowNDoyNi4wOTJa"
+                  allowtransparency="true" frameborder="0" scrolling="no"
+                  style="border:none;overflow:auto;height:685px;width:335px;"></iframe>
+          <!-- WEBSTA WIDGETS - widgets.websta.me -->
         </div>
       </iron-grid>
     </iron-grid-container>
@@ -106,7 +107,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       'use strict';
 
       Polymer({
-        is: 'latest-news',
+        is: 'social-page',
         behaviors: [
           Polymer.IronResizableBehavior,
           Polymer.NeonSharedElementAnimatableBehavior
@@ -120,7 +121,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         },
         attached: function () {
           this.async(this.notifyResize, 1);
-          this.updateStyles();
         }
       });
     })();
