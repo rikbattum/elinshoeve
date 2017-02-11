@@ -110,9 +110,8 @@ Copyright (c) 2017  Fokkerij Houtdorperveld
 
     <app-location route="{{route}}"></app-location>
     <!-- Routes -->
-    <app-route route="{{route}}" pattern="/:type" data="{{type}}" tail="{{tail}}" query-params="{{params}}"></app-route>
-
-      <paper-card on-tap="doRoute" page={{page}} id="card" image={{image_url}} class="custom" elevation="3">
+    <app-route route="{{route}}"  pattern="/:type" data="{{type}}" tail="{{tail}}" query-params="{{params}}"></app-route>
+    <paper-card page={{page}} id="card" image={{image_url}} class="custom" elevation="3">
         <paper-ripple></paper-ripple>
         <div class="titel">{{title}}</div>
         <div align="center" class="items">
@@ -178,10 +177,7 @@ Copyright (c) 2017  Fokkerij Houtdorperveld
             }
           }
         },
-        doRoute: function () {
-          this.set('route.path', this.page);
-          window.scrollTo(0,0);
-        },
+
         _checkTitleSocial: function (title) {
           if (title === "Social") {
             return true;

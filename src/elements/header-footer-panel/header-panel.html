@@ -1,25 +1,20 @@
-
-
 <dom-module id="header-panel">
   <template>
     <style include="shared-styles">
       :host {
         display: block;
       }
-
       paper-icon-button {
         color: #4527a0;
       }
-
     </style>
 
-    <paper-header-panel id="headerScroll">
     <app-header effects="waterfall resize-title blend-background parallax-background" condenses reveals shadow="true" >
       <app-toolbar>
         <app-location route="{{route}}"></app-location>
         <template is="dom-if" if="{{_isNotHomeRouteNavBar(route)}}">
           <a href="/">
-            <paper-icon-button class="headerbar" icon="arrow-back" on-click="doRouteHomeNavBar"></paper-icon-button>
+            <paper-icon-button class="headerbar" icon="arrow-back"></paper-icon-button>
           </a>
         </template>
         <div condensed-title>{{pagetitle}}</div>
@@ -29,7 +24,6 @@
         <div main-title>{{pagetitle}}</div>
       </app-toolbar>
     </app-header>
-    </paper-header-panel>
   </template>
 
   <script>
@@ -51,9 +45,6 @@
         },
         _isNotHomeRouteNavBar: function (route) {
           return this.route.path != '/';
-        },
-        doRouteHomeNavBar: function () {
-          window.scrollTo(0,0);
         },
         _routechange: function (route) {
           switch (route.path) {
