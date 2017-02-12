@@ -14,13 +14,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style include="shared-styles">
       :host {
         display: block;
-        align-content: center
+        align-content: center;
+        width: 100%
       }
 
       .setwidth {
-        width: 300px;
+        width: inherit;
         margin-bottom: 15px;
         text-align: center;
+        width: 100%
       }
 
       iframe {
@@ -49,6 +51,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       universal-footer {
         margin-top: -25px;
       }
+
       .facebookframe {
         position: relative;
         align-content: center;
@@ -92,20 +95,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <div class="background">
       <iron-grid-container>
-        <iron-grid id='grid4' xs-max-width="480" s-max-width="960" m-max-width="1280" l-max-width="1600">
-          <div class="xs12 s6 m6 displaymode">
+        <iron-grid id='grid4' log xs-max-width="480" s-max-width="960" m-max-width="1280" l-max-width="1600">
+          <div class="xs12 s6 m6 displaymode" style="width:100%">
             <div class="setwidth">
 
               <div class="facebookframe">
                 <iframe id="facebookframe"
-                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FElinshoeve%2F&tabs=timeline&width=300&height=1050&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-                        width="300" height="1050" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FElinshoeve%2F&tabs=timeline&width=300&height=900&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+                        width="300" height="900" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                         data-adapt-container-width="true"
                         allowTransparency="true"></iframe>
               </div>
             </div>
           </div>
-          <div class="xs12 s6 m6" style="margin-top: 15px; padding-left: 6%">
+          <div class="xs12 s6 m6 displaymode" style="margin-top: 15px; padding-left: 6%">
             <div class="setwidth">
               <br>
               <style>.ig-b- {
@@ -141,13 +144,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram">
               </a>
               </div>
-              <div class="setwidth">
-                <div style="position: relative; height: 16px;  overflow: hidden; padding-top:200%;">
-                  <iframe id="websta"
-                          src="//widgets-code.websta.me/w/bad0780d79c1?ck=MjAxNy0wMi0xMVQxMjo0NToyNS40MDha"
-                          class="websta-widgets" allowtransparency="true" frameborder="0" scrolling="no"
-                          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-                </div>
+              <div style="position: relative; height: 16px; padding-top:200%;">
+                <iframe id="websta"
+                        src="//widgets-code.websta.me/w/bad0780d79c1?ck=MjAxNy0wMi0xMVQxMjo0NToyNS40MDha"
+                        class="websta-widgets" allowtransparency="true" frameborder="0" scrolling="no"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
               </div>
             </div>
           </div>
