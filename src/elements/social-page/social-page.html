@@ -18,12 +18,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .setwidth {
-        width: 330px;
+        width: 300px;
         margin-bottom: 15px;
+        text-align: center;
       }
 
       iframe {
-        align: center;
+        align-self: center;
         margin-top: 15px;
         margin-left: -15px;
       }
@@ -45,33 +46,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin-top: 30px;
       }
 
-      .content280 {
-        display: none;
-      }
-
-      .content340 {
-        display: block;
-      }
-
-      .content500 {
-        display: none;
-      }
-
       universal-footer {
         margin-top: -25px;
       }
+      .facebookframe {
+        position: relative;
+        align-content: center;
+      }
 
-      @media (max-width: 600px) {
+      @media (max-width: 480px) {
 
         .setwidth {
           width: inherit;
+          text-align: center;
           margin-bottom: 15px;
         }
 
         iframe {
           align-self: center;
           margin-top: 10px;
-          margin-left: -5px;
+          margin-left: -22px;
         }
 
         .instagram_grid {
@@ -89,60 +83,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           padding-right: 0px !important;
         }
 
-        .content280 {
-          display: none;
-        }
-
-        .content340 {
-          display: block;
-        }
-
-        .content500 {
-          display: none;
-        }
-      }
-
-      @media (max-width: 320px) {
-
-        .setwidth {
-          width: inherit;
-          margin-bottom: 15px;
-        }
-
-        .content280 {
-          display: block;
-        }
-
-        .content320insta {
-          display: block;
-          margin-left: -30px;
-        }
-
-        .content340 {
-          display: none;
-        }
-
-        .content500 {
-          display: none;
-        }
-      }
-
-      @media (min-width: 1600px) {
-        .content280 {
-          display: none;
-        }
-
-        .content340 {
-          display: none;
-        }
-
-        .content500 {
-          display: block;
-        }
-
-        .setwidth {
-          width: 500px;
-          margin-bottom: 15px;
+        .facebookframe {
+          position: relative;
+          align-content: center;
         }
       }
     </style>
@@ -153,66 +96,55 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <div class="xs12 s6 m6 displaymode">
             <div class="setwidth">
 
-              <div class="content500">
-                <iframe
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FElinshoeve%2F&tabs=timeline&width=500&height=1050&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-                  width="500" height="1050" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                  allowTransparency="true"></iframe>
-              </div>
-
-              <div class="content340">
-                <iframe
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FElinshoeve%2F&tabs=timeline&width=340&height=640&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-                  width="340" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                  allowTransparency="true"></iframe>
-              </div>
-              <div class="content280">
-                <iframe
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FElinshoeve%2F&tabs=timeline&width=280&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-                  width="280" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                  allowTransparency="true"></iframe>
+              <div class="facebookframe">
+                <iframe id="facebookframe"
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FElinshoeve%2F&tabs=timeline&width=300&height=1050&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+                        width="300" height="1050" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        data-adapt-container-width="true"
+                        allowTransparency="true"></iframe>
               </div>
             </div>
           </div>
           <div class="xs12 s6 m6" style="margin-top: 15px; padding-left: 6%">
             <div class="setwidth">
-              <div>
-                <br>
-                <style>.ig-b- {
-                  display: inline-block;
-                }
+              <br>
+              <style>.ig-b- {
+                display: inline-block;
+              }
 
-                .ig-b- img {
-                  visibility: hidden;
-                }
+              .ig-b- img {
+                visibility: hidden;
+              }
 
-                .ig-b-:hover {
-                  background-position: 0 -60px;
-                }
+              .ig-b-:hover {
+                background-position: 0 -60px;
+              }
 
-                .ig-b-:active {
-                  background-position: 0 -120px;
-                }
+              .ig-b-:active {
+                background-position: 0 -120px;
+              }
 
+              .ig-b-v-24 {
+                width: 137px;
+                height: 24px;
+                background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0;
+              }
+
+              @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
                 .ig-b-v-24 {
-                  width: 137px;
-                  height: 24px;
-                  background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0;
+                  background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png);
+                  background-size: 160px 178px;
                 }
-
-                @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-                  .ig-b-v-24 {
-                    background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png);
-                    background-size: 160px 178px;
-                  }
-                }</style>
-                <div style="margin-left:-10px;"><a href="https://www.instagram.com/elinshoeve/?ref=badge"
-                                                   class="ig-b- ig-b-v-24"><img
-                  src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram">
-                </a>
-                </div>
-                <div style="position: relative; height: 16px; width: 100%; overflow: hidden; padding-top:200%;">
-                  <iframe id="websta" src="//widgets-code.websta.me/w/bad0780d79c1?ck=MjAxNy0wMi0xMVQxMjo0NToyNS40MDha"
+              }</style>
+              <div style="margin-left:-10px;"><a href="https://www.instagram.com/elinshoeve/?ref=badge"
+                                                 class="ig-b- ig-b-v-24"><img
+                src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram">
+              </a>
+              </div>
+              <div class="setwidth">
+                <div style="position: relative; height: 16px;  overflow: hidden; padding-top:200%;">
+                  <iframe id="websta"
+                          src="//widgets-code.websta.me/w/bad0780d79c1?ck=MjAxNy0wMi0xMVQxMjo0NToyNS40MDha"
                           class="websta-widgets" allowtransparency="true" frameborder="0" scrolling="no"
                           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
                 </div>
