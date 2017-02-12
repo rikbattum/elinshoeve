@@ -68,7 +68,9 @@
 
     <app-location route="{{route}}"></app-location>
     <template is="dom-if" if="{{_isNotHomeRoute(route)}}">
-      <paper-icon-button icon="arrow-back" on-tap="doRouteHome"></paper-icon-button>
+      <a href="/">
+      <paper-icon-button icon="arrow-back"></paper-icon-button>
+      </a>
     </template>
 
     <div style="align-content:center">
@@ -100,11 +102,7 @@
         },
         _isNotHomeRoute: function (route) {
           return this.route.path != '/';
-        },
-        doRouteHome: function () {
-          this.set('route.path', '/');
         }
-
       });
     })();
   </script>
