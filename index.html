@@ -11,6 +11,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <!doctype html>
 <html lang="en">
 <head>
+  <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+
   <meta charset="utf-8">
   <meta name="generator" content="Corgi Kennel Elinshoeve">
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
@@ -33,7 +36,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="My App">
+  <meta name="apple-mobile-web-app-title" content="Corgi Kennel Elinshoeve">
 
   <!-- Homescreen icons -->
   <link rel="apple-touch-icon" href="/images/manifest/icon-48x48.png">
@@ -112,11 +115,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </app-header-layout>
 </template>
 
-<!-- build:js scripts/app.js -->
-<!--<script src="src/scripts/app.js">-->
-<!--</script>-->
-<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<!-- build:js  -->
 
+<!--</script>-->
 <!-- endbuild-->
 
 <script>
@@ -128,6 +129,5 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   };
   firebase.initializeApp(config);
 </script>
-<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase-app.js"></script>
 </body>
 </html>
